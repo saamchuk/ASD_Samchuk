@@ -5,7 +5,6 @@ public class lab_4 {
     static ArrayList <String> first = new ArrayList<String>();
     static ArrayList <String> second = new ArrayList<String>();
     public static void main (String[] args) {
-        Scanner in = new Scanner(System.in);
         int n = menu();
         int G;
         while (n != 0) {
@@ -20,9 +19,8 @@ public class lab_4 {
                                     first.add(name());
                                 }
                             }
-                            case 2 -> {
+                            case 2 ->
                                 first.remove(name());
-                            }
                             case 3 -> {
                                 int number = student();
                                 System.out.println(first.get(number));
@@ -48,9 +46,8 @@ public class lab_4 {
                                     second.add(name());
                                 }
                             }
-                            case 2 -> {
+                            case 2 ->
                                 second.remove(name());
-                            }
                             case 3 -> {
                                 int number = student();
                                 System.out.println(second.get(number));
