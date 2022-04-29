@@ -105,9 +105,8 @@ public class lab_3 {
                         outPrint(i, arr);
                     }
                 }
-                case 3 -> {
+                case 3 ->
                     search(arr, N);
-                }
             }
             n = menu();
         }
