@@ -15,20 +15,16 @@ public class lab_4 {
                     while (G != 0) {
                         switch (G) {
                             case 1 -> {
-                                System.out.print("Введіть кількість студентів: ");
-                                int s = in.nextInt();
-                                System.out.println("Прізвища:");
+                                int s = numStudent();
                                 for (int i = 0; i <= s; i++) {
-                                    first.add(in.nextLine());
+                                    first.add(name());
                                 }
                             }
                             case 2 -> {
-                                System.out.print("Введіть прізвище: ");
-                                first.remove(in.nextLine());
+                                first.remove(name());
                             }
                             case 3 -> {
-                                System.out.println("Введіть номер: ");
-                                int number = in.nextInt();
+                                int number = student();
                                 System.out.println(first.get(number));
                             }
                             case 4 -> {
@@ -47,20 +43,16 @@ public class lab_4 {
                     while (G != 0) {
                         switch (G) {
                             case 1 -> {
-                                System.out.print("Введіть кількість студентів: ");
-                                int s = in.nextInt();
-                                System.out.println("Прізвища:");
+                                int s = numStudent();
                                 for (int i = 0; i <= s; i++) {
-                                    second.add(in.nextLine());
+                                    second.add(name());
                                 }
                             }
                             case 2 -> {
-                                System.out.print("Введіть прізвище: ");
-                                second.remove(in.nextLine());
+                                second.remove(name());
                             }
                             case 3 -> {
-                                System.out.println("Введіть номер: ");
-                                int number = in.nextInt();
+                                int number = student();
                                 System.out.println(second.get(number));
                             }
                             case 4 -> {
@@ -75,8 +67,7 @@ public class lab_4 {
                     }
                 }
                 case 3 -> {
-                    System.out.print("Введіть кількість студентів до переведення: ");
-                    int ch = in.nextInt();
+                    int ch = numStudent();
                     for (int i = 1; i <= ch; i++) {
                         first.add(second.get(i));
                         second.remove(second.get(i));
@@ -102,6 +93,21 @@ public class lab_4 {
         System.out.println("2. Вилучити студента.");
         System.out.println("3. Пошук за заданим номером студента.");
         System.out.println("4. Друкування списку.");
+        return in.nextInt();
+    }
+    static String name() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введіть прізвище: ");
+        return in.nextLine();
+    }
+    static int numStudent () {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введіть кількість студентів: ");
+        return in.nextInt();
+    }
+    static int student() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введіть номер: ");
         return in.nextInt();
     }
 }
