@@ -2,9 +2,9 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class lab_4 {
-    static ArrayList <String> first = new ArrayList<String>();
-    static ArrayList <String> second = new ArrayList<String>();
     public static void main (String[] args) {
+        ArrayList <String> first = new ArrayList<String>();
+        ArrayList <String> second = new ArrayList<String>();
         int n = menu();
         int G;
         while (n != 0) {
@@ -15,7 +15,7 @@ public class lab_4 {
                         switch (G) {
                             case 1 -> {
                                 int s = numStudent();
-                                for (int i = 0; i <= s; i++) {
+                                for (int i = 1; i <= s; i++) {
                                     first.add(name());
                                 }
                             }
@@ -42,7 +42,7 @@ public class lab_4 {
                         switch (G) {
                             case 1 -> {
                                 int s = numStudent();
-                                for (int i = 0; i <= s; i++) {
+                                for (int i = 1; i <= s; i++) {
                                     second.add(name());
                                 }
                             }
