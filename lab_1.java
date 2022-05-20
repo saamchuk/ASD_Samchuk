@@ -7,7 +7,7 @@ public class lab_1 {
         int n = input();
         while (n != 0) {
             switch (n) {
-                case 1: {
+                case 1 -> {
                     System.out.print("Значення координат першої точки: ");
                     float x1 = in.nextFloat();
                     float y1 = in.nextFloat();
@@ -15,16 +15,14 @@ public class lab_1 {
                     float x2 = in.nextFloat();
                     float y2 = in.nextFloat();
                     System.out.println("Відстань між точками: " + (Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2))));
-                    break;
                 }
-                case 2: {
+                case 2 -> {
                     System.out.print("Введіть значення х: ");
                     double x = in.nextDouble();
                     double y = (1 + (3 * x)) / (2 + Math.cbrt(1 + x));
                     System.out.println("Значення у: " + y);
-                    break;
                 }
-                case 3: {
+                case 3 -> {
                     System.out.print("Введіть чотиризначне число: ");
                     int number = in.nextInt();
                     String result;
@@ -38,10 +36,8 @@ public class lab_1 {
                         result = (a == b) ? "Істинне" : "Хибне";
                         System.out.println("Твердження: Сума двох перших цифр даного чотиризначного числа дорівнює сумі двох його останніх цифр \n- є: " + result);
                     } else System.out.println("Введене число не чотиризначне.");
-                    break;
                 }
-                default:
-                    System.out.println("Номер введено не вірно.");
+                default -> System.out.println("Номер введено не вірно.");
             }
             n = input();
         }

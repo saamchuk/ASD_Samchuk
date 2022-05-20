@@ -3,8 +3,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class lab_4 {
     public static void main (String[] args) {
-        ArrayList <String> first = new ArrayList<String>();
-        ArrayList <String> second = new ArrayList<String>();
+        ArrayList <String> first = new ArrayList<>();
+        ArrayList <String> second = new ArrayList<>();
         int n = menu();
         int G;
         while (n != 0) {
